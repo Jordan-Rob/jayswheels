@@ -5,5 +5,5 @@ from django.contrib.auth.models import AbstractUser
 
 
 class CustomUser(AbstractUser):
-    age = models.IntegerField(null=False, blank=False)
+    age = models.IntegerField(null=True, blank=True)
     address = models.CharField(null=False, blank=False, max_length=30)
