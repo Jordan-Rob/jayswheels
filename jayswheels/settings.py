@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'categories.apps.CategoriesConfig',
     'cars.apps.CarsConfig',
+    'pages.apps.PagesConfig',
 
     'django.contrib.contenttypes',
     'django.contrib.sessions',

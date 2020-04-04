@@ -51,9 +51,13 @@
           <div class="navbar-nav ml-lg-auto">
             <a class="nav-item nav-link" href="#">Home</a>
             <a class="nav-item nav-link" href="#">Categories</a>
-            <a class="nav-item nav-link" href="#">LogIn </a>
+            {% if user.is_authenticated %}
+            <a class="nav-item nav-link" href="{% url 'logout' %}">LogOut </a>
+            {% else %}
+            <a class="nav-item nav-link" href="{% url 'login' %}">LogIn </a>
             <a class="nav-item nav-link" href="#">|</a>
-            <a class="nav-item nav-link" href="#"> SignUp</a>
+            <a class="nav-item nav-link" href="{% url 'signup' %}"> SignUp</a>
+            {% endif %}
           </div>
         </div>
       </nav>
