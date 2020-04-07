@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<div class="card bg-dark text-white" style="height: 40vh;">
+    <img src="../media/images/filip-bunkens-bcq-S4sjXFQ-unsplash.jpg" class="card-img" alt="...">
+    <div class="card-img-overlay">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text">Last updated 3 mins ago</p>
+    </div>
+</div>
+
 <section id="categories">
     <div class="container">
         <div class="row">
@@ -13,7 +22,7 @@
                           <p class="card-text">{{ category.description  }}</p>
                           <a href="#" class="btn btn-primary">Explore</a>
                         </div>
-                      </div>
+                    </div>
                 </div>
             {% endfor %}
         </div>
