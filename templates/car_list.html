@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<section>
+    <div class="container">
+        <div class="row">
+            {% for car in object_list %}
+            <div class="col col-sm-4">
+                <div class="card">
+                    <img src="{{ car.image.url }}" class="card-img-top" alt="..." />
+                    <div class="card-body" ">
+                      <h5 class="card-title">{{ car.model }}</h5>
+                      <p class="card-text">{{ car.transmission }}</p>
+                      <p class="card-text">{{ car.category }}</p>
+                      <a href="{% url 'car_detail' car.id %}" class="btn btn-primary">Explore</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock  %}

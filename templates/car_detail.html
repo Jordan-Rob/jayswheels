@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="card mb-3" style="max-width: 740px;">
+                <div class="row no-gutters">
+                  <div class="col-md-8">
+                    <img src="{{ car.image.url  }}" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card-body">
+                      <h5 class="card-title"> {{ car.make }} {{ car.model }}</h5>
+                      <p class="card-text">Year: {{ car.year }}</p>
+                      <p class="card-text">Transmission: {{ car.transmission }}</p>
+                      <p class="card-text"><small class="text-muted">Category: {{ car.category }}</small></p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
