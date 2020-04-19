@@ -20,5 +20,6 @@ class CategoryDetailView(DetailView):
         context = super(CategoryDetailView, self).get_context_data(
             *args, **kwargs)
         context['category_cars'] = Car.objects.filter(
-            category=self.request.name)
+            category=context['object']
+        )
         return context

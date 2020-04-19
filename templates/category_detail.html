@@ -1,5 +1,5 @@
 {% extends 'base.html' %} 
-{% bolck content %}
+{% block content %}
 
 <section>
     <div class="container">
@@ -21,6 +21,25 @@
             </div>
         </div>
     </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row">
+      {% for car in category_cars %}
+      <div class="col col-sm-4">
+        <div class="card">
+          <img src="{{ car.image.url }}" class="card-img-top" alt="..." />
+          <div class="card-body" ">
+            <h5 class="card-title">{{ car.make }} {{ car.model }}</h5>
+            <p class="card-text">{{ car.transmission }}</p>
+            <a href="{% url 'car_detail' car.id %}" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </section>
 
 {% endblock %}
