@@ -26,5 +26,5 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('', include('categories.urls')),
     path('', include('cars.urls')),
-    #path('', include('reviews.urls')),
+    path('', include('car_reviews.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
