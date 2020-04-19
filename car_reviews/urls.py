@@ -7,7 +7,7 @@ from .views import (
     ReviewUpdateView
 )
 
-urlpatters = [
+urlpatterns = [
     path('reviews/create/', ReviewCreateView.as_view(), name='review_create'),
     path('review/<int:pk>/', ReviewDetailView.as_view(), name='review_detail'),
     path('review/<int:pk>/delete/',

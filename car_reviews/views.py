@@ -1,7 +1,7 @@
-ffrom django.views.generic import CreateView, DetailView
+
 from django.urls import reverse_lazy
-from django.urls import (
-    reverse_lazy,
+from django.views.generic import (
+    CreateView,
     DetailView,
     UpdateView,
     DeleteView
