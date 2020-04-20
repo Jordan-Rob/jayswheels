@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col col-sm-12">
+                <div class="card text-center">
+                    <div class="card-header">
+                      Review
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">{{ review.title }}</h5>
+                      <p class="card-text">{{ review.description }}</p>
+                      <p>
+                        <a href="{% url 'review_update' review.id %}" class="btn btn-primary">Back to Car</a>
+                        <a href="{% url 'review_delete' review.id %}" class="btn btn-danger">Delete</a>
+                      </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                      2 days ago
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
