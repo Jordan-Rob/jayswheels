@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col col-sm-12">
+                <div
+                class="container mx-auto shadow p-3 mb-5 bg-white rounded"
+                style="width: 600px; margin-top: 100px; text-align: center;"
+                >
+                    <form action="" method="post" style="padding: 30px 0 50px 0;">
+                        <h3 style="padding-bottom: 20px;">Make your Review</h3>
+                        {% csrf_token %} {{ form.as_p }}
+                        <button type="submit">Create</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
