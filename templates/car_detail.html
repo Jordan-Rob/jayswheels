@@ -21,4 +21,38 @@
         </div>
     </div>
 </section>
+
+<section style="margin-bottom: 140px;">
+  <div class="container">
+    <div class="row">
+      <div class="col col-sm-12" style="text-align: center;">
+        <h3>{{ car.name }} {{ car.model }} Reviews</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    {% for review in object.review_set.all %}
+    <div class="row">
+      <div class="col col-sm-12">
+        <div class="card text-center">
+          <div class="card-header">
+            Review
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ review.title }}</h5>
+            <p class="card-text">{{ review.description }}</p>
+            <a href="{% url 'review_detail' review.id %}" class="btn btn-danger">Details</a>
+          </div>
+          <div class="card-footer text-muted">
+            <small>added by {{ review.user }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
 {% endblock %}
