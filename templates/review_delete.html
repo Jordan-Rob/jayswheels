@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col col-sm-12">
+                <div
+                class="container mx-auto shadow p-3 mb-5 bg-white rounded"
+                style="width: 600px; margin-top: 100px; text-align: center;"
+                >
+                    <form action="" method="post" style="padding: 30px 0 50px 0;">
+                        <h4 style="padding-bottom: 20px;">Delete Review</h4>
+                        {% csrf_token %} 
+                        <p>Are you sure you want to delete {{ review.title }} review</p>
+                        <button type="submit">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
