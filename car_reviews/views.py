@@ -20,6 +20,7 @@ class ReviewCreateView(CreateView):
 
     def form_valid(self, form):
         form.instance.user = self.request.user
+        form.instance.car = self.request.car
         return super().form_valid(form)
 
 
