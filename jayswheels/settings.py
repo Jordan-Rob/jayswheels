@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'car_reviews.apps.CarReviewsConfig',
 
+    'crispy_forms',
+
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -135,3 +137,6 @@ LOGOUT_REDIRECT_URL = 'home'
 # media configurations
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# crispy
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
